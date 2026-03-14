@@ -7,7 +7,7 @@ template: splash
 tableOfContents: false
 ---
 
-import SocialIcons from "@astrojs/starlight/components/SocialIcons.astro";
+import SocialIcons from "@components/SocialIcons.astro";
 import ThemeSelect from "@astrojs/starlight/components/ThemeSelect.astro";
 
 import heroLight from "@assets/hero-light.png";
@@ -80,6 +80,8 @@ import ThemeSwitch from "@components/ThemeSwitch.astro";
           <MainButtons
             primaryClass="bg-yellow-500 !text-black dark:bg-blue-700 dark:!text-white"
             secondaryClass="!bg-blue-700 text-white dark:!bg-white dark:!text-black"
+            browseTitle="Browse tutorials"
+            browseHref="/tutorials/"
           />
         </div>
 
@@ -129,9 +131,9 @@ import ThemeSwitch from "@components/ThemeSwitch.astro";
       <div class="pt-5">
         <TutorialVideos />
         <div class="flex justify-center pt-10">
-          <a class="no-underline" href="/tutorials/">
+          <a class="no-underline" href="/tutorials/videos/">
             <span class="bracket-btn font-bold text-2xl max-sm:text-base text-white bg-blue-700 p-4 px-8 glitch-container">
-              {`Explore the tutorials ::<>`}
+              {`Watch the videos ::<>`}
             </span>
           </a>
         </div>
@@ -147,7 +149,7 @@ import ThemeSwitch from "@components/ThemeSwitch.astro";
     </div>
 
     <div class="flex justify-center">
-      <div class="flex justify-center gap-10 text-center py-10 w-screen bg-gradient-to-b from-slate-500 to-slate-300 dark:from-slate-950 dark:to-slate-950 mb-[-65px]">
+      <div class="flex justify-center gap-10 text-center py-10 w-[calc(100vw-15px)] bg-gradient-to-b from-slate-500 to-slate-300 dark:from-slate-950 dark:to-slate-950 mb-[-65px]">
         <div class="py-10">
           <h2 class="!text-6xl max-md:!text-3xl max-2xl:px-5 pb-10 !text-white">Ready to start <span class="text-yellow-500">cooking?</span></h2>
           <p class="text-xl max-md:text-sm pb-5 max-2xl:px-5 text-white">Join thousands of <span class="dark:text-yellow-500">{`{rats}`}</span> cooking up the next generation of terminal applications.</p>
